@@ -793,3 +793,59 @@ img {
         gap: 15px;
     }
 }
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   ACTIVE NAVIGATION
+========================================= */
+
+.nav-links a.active {
+    color: #38bdf8;
+}
+
+
+/* =========================================
+   SCROLLED NAVBAR
+========================================= */
+
+.header.scrolled {
+    background: rgba(7, 12, 22, 0.96);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
